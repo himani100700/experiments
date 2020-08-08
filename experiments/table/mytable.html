@@ -1,0 +1,201 @@
+<html>
+
+<head>
+
+    <style>
+        body {
+            font-family: 'lato', sans-serif;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        h2 {
+            font-size: 26px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        h2 small {
+            font-size: 0.5em;
+        }
+        
+        .responsive-table li {
+            border-radius: 3px;
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        
+        th,
+        tr {
+            border-radius: 3px;
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        
+        .table-row {
+            background-color: #f1f9ff;
+            border-radius: 10px;
+        }
+        
+        .responsive-table .table-header {
+            background-color: #95A5A6;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        
+        .responsive-table .table-row {
+            background-color: #f1f9ff;
+            border-radius: 10px;
+        }
+        
+        .responsive-table .col-1 {
+            flex-basis: 10%;
+        }
+        
+        .responsive-table .col-2 {
+            flex-basis: 40%;
+        }
+        
+        .responsive-table .col-3 {
+            flex-basis: 25%;
+        }
+        
+        .responsive-table .col-4 {
+            flex-basis: 25%;
+        }
+        
+        @media all and (max-width: 767px) {
+            .responsive-table .table-header {
+                display: none;
+            }
+            .responsive-table li {
+                display: block;
+            }
+            .responsive-table .col {
+                flex-basis: 100%;
+            }
+            .responsive-table .col {
+                display: flex;
+                padding: 10px 0;
+            }
+            .responsive-table .col:before {
+                color: #6C7A89;
+                padding-right: 10px;
+                content: attr(data-label);
+                flex-basis: 50%;
+                text-align: right;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Responsive Tables Using LI <small>Triggers on 767px</small></h2>
+        <ul class="responsive-table">
+            <li class="table-header">
+                <div class="col col-1">Job Id</div>
+                <div class="col col-2">Customer Name</div>
+                <div class="col col-3">Amount Due</div>
+                <div class="col col-4">Payment Status</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42235</div>
+                <div class="col col-2" data-label="Customer Name">John Doe</div>
+                <div class="col col-3" data-label="Amount">$350</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42442</div>
+                <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
+                <div class="col col-3" data-label="Amount">$220</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42257</div>
+                <div class="col col-2" data-label="Customer Name">John Smith</div>
+                <div class="col col-3" data-label="Amount">$341</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42311</div>
+                <div class="col col-2" data-label="Customer Name">John Carpenter</div>
+                <div class="col col-3" data-label="Amount">$115</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+            </li>
+        </ul>
+
+
+        <table class="table table-hover" style="justify-content: center;">
+            <thead>
+                <tr class="specify">
+                    <th scope="col">Percentage</th>
+                    <th scope="col">Branch</th>
+                    <th scope="col">Remaining</th>
+                    <th scope="col">Registered</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <th scope=" col " style="font-size: xx-large; "><span class="badge badge-primary ">80%</span></th>
+                <tr class="table-row">
+                    <th scope="col ">CSE</th>
+                    <th scope="col ">10</th>
+                    <th scope="col ">20</th>
+                    <th scope="col ">45</th>
+                </tr>
+                <tr class="table-primary" style="margin-top: 2;">
+                    <th scope="col " style="font-size: xx-large; "><span class="badge badge-success ">80%</span></th>
+                    <th scope="col ">IT</th>
+                    <th scope="col ">Remaining</th>
+                    <th scope="col ">Registered</th>
+                    <th scope="col ">Total</th>
+                </tr>
+
+                <tr>
+                    <th scope="col " style="font-size: xx-large; "><span class="badge badge-warning ">80%</span></th>
+                    <th scope="col ">ECE</th>
+                    <th scope="col ">Remaining</th>
+                    <th scope="col ">Registered</th>
+                    <th scope="col ">Total</th>
+                </tr>
+                <tr>
+                    <th scope="col " style="font-size: xx-large; "><span class="badge badge-danger ">80%</span></th>
+                    <th scope="col ">CE</th>
+                    <th scope="col ">Remaining</th>
+                    <th scope="col ">Registered</th>
+                    <th scope="col ">Total</th>
+                </tr>
+                <tr>
+                    <th scope="col " style="font-size: xx-large; "><span class="badge badge-info ">80%</span></th>
+                    <th scope="col ">ME</th>
+                    <th scope="col ">Remaining</th>
+                    <th scope="col ">Registered</th>
+                    <th scope="col ">Total</th>
+                </tr>
+                <tr>
+
+                    <th scope="col " style="font-size: xx-large; "><span class="badge badge-secondary ">80%</span></th>
+                    <th scope="col ">EI</th>
+                    <th scope="col ">Remaining</th>
+                    <th scope="col ">Registered</th>
+                    <th scope="col ">Total</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

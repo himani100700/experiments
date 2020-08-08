@@ -1,0 +1,231 @@
+<html>
+
+<head> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <STYLE>
+        body{
+         background-image:   url("bg-01.svg");
+            height: 2000px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* .card{
+    height: 750px;
+    width:58%;
+    margin-left: 21%;
+    margin-right: 21%;
+    background-color: rgb(7, 58, 116);
+    margin-bottom: 5%;
+    margin-top: 6%;
+    border-radius: 30px;
+}
+.himanshi{
+    background-color:#f51111;
+    height:100px;
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: -10%;
+    border-radius: 25px;
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    line-height: 2.7;
+} */
+
+.card-center {
+    padding: 2em;
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-10%);
+    z-index: 100;
+    margin-bottom: 50px;
+}
+
+.cstmcard {
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    padding: 2%;
+    background-color: #0275d8;
+}
+
+.redbox {
+    width: fit-content;
+    margin-top: -11%;
+    background-color: #d9534f;
+    color: white;
+    align-self: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.btn {
+    color: #0275d8;
+    border-radius: 15px;
+}
+
+.btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a {
+    text-decoration: none;
+    width: fit-content;
+    align-self: center;
+}
+
+@media (max-width: 700px) {
+    .card-center {
+        width: 85%;
+    }
+    h1 {
+        font-size: xx-large;
+    }
+    .card-center {
+        transform: translateX(-50%)translateY(-12%);
+    }
+}
+
+@media (max-width: 650px) {
+    .card-center {
+        transform: translateX(-50%)translateY(-10%);
+    }
+    .redbox {
+        font-size: medium;
+    }
+}
+
+
+/* form {
+    align-content: centerS;
+} */
+
+.noob {
+    align-content: center;
+}
+
+
+/* .btn-center {
+    transform: translateX(100%);
+} */
+    </STYLE>
+</head>
+
+<body>
+ <br><br><br><br><br>
+<h1 style="text-align: center">new semester registration</h1>
+  
+
+<div class="card card-center cstmcard">
+   
+    <div class="card redbox py-3 px-5 ">
+        <h1>Registration Form</h1>
+    </div>
+
+    <form style="padding:5% 10% 0 10%;font-size: x-large; " [formGroup]="userProfileForm" (ngSubmit)=onSubmit()>
+
+        <div class="form-group">
+            <label for="fullName"><b>Full Name</b></label>
+            <input type="text" class="form-control" id="fullName" formControlName="full_name">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="studentNo"><b>Student No.</b></label>
+                <input type="number" class="form-control mr-3" id="studentNo" formControlName="student_no">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="rollNo"><b>Roll No.</b></label>
+                <input type="number" class="form-control" id="rollNo" formControlName="roll_no">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email"><b>E-mail</b></label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group col-md">
+                <label for="course"><b>Course</b></label>
+                <select id="course" class="form-control" formControlName="course">
+          <option selected>B.Tech</option>
+          <option>MBA</option>
+          <option>MCA</option>
+        </select>
+            </div>
+
+            <div class="form-group col-md">
+                <label for="branch"><b>Branch</b></label>
+                <select id="branch" class="form-control" formControlName="branch">
+          <option>IT</option>
+          <option>CSE</option>
+          <option>ECE</option>
+          <option>Civil</option>
+          <option>ME</option>
+          <option>EI</option>
+          <option>EN</option>
+        </select>
+            </div>
+            <div class="form-group col-md">
+                <label for="branch"><b>Year</b></label>
+                <select id="branch" class="form-control" formControlName="year">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+            </div>
+
+            <div class="form-group col-md">
+                <label for="sem"><b>Semester</b></label>
+                <select id="sem" class="form-control" formControlName="semester">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+        </select>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <label for="phoneNo"><b>Address</b></label>
+            <input type="text" class="form-control" id="phoneNo" formControlName="address">
+        </div>
+        <div class="form-group">
+            <label for="phoneNo"><b>Father's name</b></label>
+            <input type="text" class="form-control" id="phoneNo" formControlName="father_name">
+        </div>
+        <div class="form-group">
+            <label for="phoneNo"><b>Mobile number</b></label>
+            <input type="number" class="form-control" id="phoneNo" formControlName="mobile">
+        </div>
+        <div class="form-group">
+            <label for="phoneNo"><b>Session</b></label>
+            <input type="number" class="form-control" id="phoneNo" formControlName="session">
+        </div>
+        <a routerLink="/submitted">
+        </a>
+        <button type="submit" class="btn btn-light noob btn-center">  
+      <h4 class="px-4 py-0"> Submit </h4>
+  </button>
+    </form>
+
+</div>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script> 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
